@@ -1,0 +1,51 @@
+{
+  "name": "kocaelitemsilci-html",
+  "version": "1.0.0",
+  "description": "Kocaeli Temsilci HTML Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp",
+    "archive": "gulp archive",
+    "build": "gulp build",
+    "clean": "gulp clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/mavisland/kocaelitemsilci-html.git"
+  },
+  "keywords": [
+    "psd2html",
+    "html",
+    "gulp",
+    "bootstrap",
+    "jquery"
+  ],
+  "author": "Tanju Yildiz <ben@tanjuyildiz.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/mavisland/kocaelitemsilci-html/issues"
+  },
+  "homepage": "https://gitlab.com/mavisland/kocaelitemsilci-html#README",
+  "devDependencies": {
+    "browser-sync": "^2.20.1",
+    "del": "^3.0.0",
+    "es6-promise": "^4.2.2",
+    "gulp": "^3.9.1",
+    "gulp-archiver": "^1.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cache": "^1.0.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.2.1",
+    "gulp-header": "^1.8.9",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp.spritesmith": "^6.7.0"
+  }
+}
