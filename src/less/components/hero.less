@@ -1,0 +1,137 @@
+//
+// Components: Hero
+// --------------------------------------------------
+
+.hero {
+	position: relative;
+	margin-top: -@navbar-height;
+
+	&.is-bg-image {
+		background: url('../images/hero.jpg') center center no-repeat;
+		background-size: cover;
+	}
+	&.is-fullheight {
+		&,
+		.hero-body {
+			min-height: 100vh;
+		}
+	}
+	@media (min-width: @screen-sm) {
+		margin-top: -70px;
+	}
+	@media (min-width: @screen-sm) and (max-width: @screen-md) and (orientation: portrait) {
+		&.is-fullheight {
+			&,
+			.hero-body {
+				min-height: 50vh;
+			}
+		}
+	}
+	@media (min-width: @screen-md) {
+		margin-top: -90px;
+	}
+}
+
+.hero-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.text-center();
+}
+
+.hero-title {
+	color: #fff;
+	font-size: 18px;
+	line-height: (24 / 18);
+	margin-bottom: 20px;
+	margin-top: 0;
+	padding-bottom: 20px;
+	position: relative;
+	.text-uppercase();
+
+	&:before {
+		background-color: #809478;
+		border-radius: 5px;
+		content: "";
+		display: block;
+		position: absolute;
+			bottom: 0;
+			left: 50%;
+		transform: translateX(-50%);
+		.size(100px, 7px);
+	}
+	@media (min-width: @screen-md) {
+		font-size: 28px;
+		line-height: (36 / 28);
+		margin-bottom: 50px;
+	}
+}
+
+.hero-btn {
+	background-color: #5F7C8A;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 15px;
+	line-height: (25 / 15);
+	height: 45px;
+	padding: 10px 15px;
+	.text-uppercase();
+
+	.fa {
+		display: inline-block;
+		font-size: 21px;
+		line-height: (25 / 21);
+		margin-right: 5px;
+	}
+	&:hover,
+	&:focus {
+		background-color: #363636;
+		color: #fff;
+	}
+}
+
+.scroll-icon {
+	border-radius: 44px;
+	border: 2px solid #fff;
+	color: rgba(255, 255, 255, .5);
+	display: inline-block;
+	font-size: 22px;
+	margin-bottom: 20px;
+	transition: .4s;
+	.size(26px, 44px);
+	position: absolute;
+		bottom: 0;
+		left: 50%;
+	transform: translateX(-50%);
+
+	&:after {
+		animation: scroll-icon 2.2s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+		background-color: #fff;
+		border-radius: 50%;
+		content: "";
+		display: inline-block;
+		margin-left: -1px;
+		.square(4px);
+	}
+	&:hover,
+	&:focus {
+		background-color: rgba(255, 255, 255, .05);
+		color: #fff;
+	}
+}
+
+@keyframes scroll-icon {
+	0% {
+		.opacity(0);
+		transform: translateY(-12px);
+	}
+	30%,
+	70% {
+		.opacity(1);
+	}
+	100% {
+		.opacity(0);
+		transform: translateY(12px);
+	}
+}
