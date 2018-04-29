@@ -1,0 +1,141 @@
+//
+// Partials: Footer
+// --------------------------------------------------
+
+.site-footer {
+	background-color: #f2f2f2;
+	color: #5F7C8A;
+	position: relative;
+
+	.footer-brand {
+		padding: 10px 0 20px;
+		position: relative;
+		.size(216px, 100px);
+		.text-center();
+
+		&,
+		&:before,
+		> img {
+			display: inline-block;
+		}
+		&:before {
+			border-color: #fff transparent transparent transparent;
+			border-width: 100px 108px 0 108px;
+			border-style: solid;
+			content: "";
+			position: absolute;
+				left: 50%;
+				top: 0;
+			transform: translateX(-50%);
+			.square(0);
+			z-index: 0;
+		}
+		> img {
+			max-height: 100%;
+			position: relative;
+			transition: all .2s ease;
+			width: auto;
+		}
+		&:hover,
+		&:focus {
+			> img {
+				opacity: .7;
+			}
+		}
+	}
+	.widget {
+		position: relative;
+	}
+	.widget-body {
+		position: relative;
+	}
+	.widget-links {
+		.margin-tb();
+
+		ul.list-with-icons {
+			list-style: none;
+			margin-bottom: 0;
+			padding-left: 0;
+
+			> li {
+				display: block;
+
+				> a {
+					display: block;
+					font-size: 15px;
+					line-height: (24 / 15);
+					.padding-tb(5px);
+
+					> .fa {
+						display: inline-block;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+	}
+	.widget-pages {
+		ul > li > a {
+			color: #707070;
+
+			> .fa {
+				color: #5F7C8A;
+				font-size: 24px;
+				line-height: 1;
+			}
+			&:hover,
+			&:focus {
+				color: #363636;
+			}
+		}
+	}
+	.widget-contact {
+		ul > li > a {
+			color: #969696;
+
+			&:hover,
+			&:focus {
+				color: #363636;
+			}
+		}
+	}
+	.widget-copyright {
+		font-weight: bold;
+		.text-center();
+	}
+	@media (min-width: @screen-md) {
+		.footer-brand {
+			padding-top: 20px;
+			.size(400px, 200px);
+
+			&:before {
+				border-width: 200px 200px 0 200px;
+			}
+		}
+		.widget-links {
+			.margin-tb(50px);
+
+			ul.list-with-icons > li > a {
+				.padding-tb();
+			}
+		}
+	}
+}
+
+.scroll-top {
+	color: #5F7C8A;
+	display: inline-block;
+	font-size: 32px;
+	line-height: 1;
+	margin: 15px;
+	.text-center();
+	.square(32px);
+
+	&:hover,
+	&:focus {
+		color: #363636;
+	}
+	@media (min-width: @screen-md) {
+		.margin-tb(30px);
+	}
+}
