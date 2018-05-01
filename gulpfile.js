@@ -160,7 +160,7 @@ gulp.task('scripts', function(){
     'src/vendor/bootstrap/js/scrollspy.js',
     'src/vendor/bootstrap/js/tab.js',
     'src/vendor/bootstrap/js/affix.js',
-    'src/scripts/main.js'
+    'src/js/main.js'
   ])
     .pipe(plumber(function(error) {
       gutil.log(gutil.colors.red('Error (' + error.plugin + '): ' + error.message));
