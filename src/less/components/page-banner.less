@@ -1,0 +1,31 @@
+//
+// Components: Page Banner
+// --------------------------------------------------
+
+.page-banner {
+	background-color: #F2F2F2;
+	color: #565656;
+
+	.breadcrumb {
+		margin: 0;
+		padding: 12px 0;
+
+		font-size: 15px;
+		line-height: (22 / 15);
+
+		> li + li:before {
+			.fa();
+		}
+
+		> li {
+			> a {
+				color: @breadcrumb-color;
+
+				&:hover,
+				&:focus {
+					color: @breadcrumb-active-color;
+				}
+			}
+		}
+	}
+}
