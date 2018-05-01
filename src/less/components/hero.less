@@ -4,7 +4,6 @@
 
 .hero {
 	position: relative;
-	margin-top: -@navbar-height;
 
 	&.is-bg-image {
 		background: url('../images/hero.jpg') center center no-repeat;
@@ -16,8 +15,13 @@
 			min-height: 100vh;
 		}
 	}
+	.navbar.navbar-fixed-top ~ &.is-fullheight {
+		margin-top: -@navbar-height;
+	}
 	@media (min-width: @screen-sm) {
-		margin-top: -70px;
+		.navbar.navbar-fixed-top ~ &.is-fullheight {
+			margin-top: -70px;
+		}
 	}
 	@media (min-width: @screen-sm) and (max-width: @screen-md) and (orientation: portrait) {
 		&.is-fullheight {
@@ -28,7 +32,9 @@
 		}
 	}
 	@media (min-width: @screen-md) {
-		margin-top: -90px;
+		.navbar.navbar-fixed-top ~ &.is-fullheight {
+			margin-top: -90px;
+		}
 	}
 }
 

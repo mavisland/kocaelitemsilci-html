@@ -1,0 +1,43 @@
+//
+// Components: Content
+// --------------------------------------------------
+
+.site-content {
+	position: relative;
+}
+
+.section {
+	&,
+	&-header,
+	&-object,
+	&-body,
+	&-footer {
+		position: relative;
+	}
+}
+
+.section-title {
+	color: #707070;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: (24 / 18);
+	margin: 0;
+
+	@media (min-width: @screen-sm) {
+		font-size: 24px;
+	}
+	@media (min-width: @screen-md) {
+		font-size: 30px;
+	}
+}
+
+.section-links {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	> li {
+		display: inline-block;
+		.padding-lr();
+	}
+}
